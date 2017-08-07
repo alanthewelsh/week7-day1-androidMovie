@@ -1,6 +1,7 @@
 package com.example.alanmclarney.movieranking;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Created by alanmclarney on 07/08/2017.
@@ -8,9 +9,10 @@ import java.util.ArrayList;
 
 public class Movie {
 
-        private String title;
-        private String genre;
-        private int ranking;
+    private String title;
+    private String genre;
+    private int ranking;
+    private ArrayList<String> movies;
 
     public Movie(String title, String genre, int ranking) {
         this.title = title;
@@ -42,41 +44,12 @@ public class Movie {
         this.title = title;
     }
 
-   public ArrayList<String> titles;
-//
-   public Movie(){
-        titles = new ArrayList<String>();
-        setUpTitles();
-    }
-//
-    public int getLength() {
-        return titles.size();
-    }
-//
-
-    private void setUpTitles() {
-        String[] titleToAdd = {
-                "The Hulk",
-                "The Godfather",
-                "The Departed",
-                "Dr StrangeLove",
-                "The Gladiator",
-                "Mr Nice",
-                "In Bruge"};
-        String[] genreToAdd = {
-                "SuperHero",
-                "Crime Thriller",
-                "Crime Thriller",
-                "Alternative",
-                "Historical Epic",
-                "Alternative",
-                "Alternative"};
-        for (String title, genre; titleToAdd, genreToAdd) {
-            titles.add(title, genre);
-        }
+    public void getMovieDetails(){
+        return "Title: " + this.title + "Genre:" + this.genre + "Ranking: " + this.ranking;
     }
 
-    public String getTitleAtIndex(int index) {
-        return titles.get(index);
+    public String getAnswerAtIndex(int index) {
+        return movies.get(index);
     }
 }
+
