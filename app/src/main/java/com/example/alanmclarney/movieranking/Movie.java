@@ -18,8 +18,6 @@ public class Movie {
         this.ranking = ranking;
     }
 
-
-
     public String getGenre() {
         return genre;
     }
@@ -44,37 +42,41 @@ public class Movie {
         this.title = title;
     }
 
-//    public ArrayList<String> titles;
+   public ArrayList<String> titles;
 //
-//    public Movie(){
-//        titles = new ArrayList<String>();
-//        setUpTitles();
-//    }
+   public Movie(){
+        titles = new ArrayList<String>();
+        setUpTitles();
+    }
 //
-//    public int getLength(){
-//        return titles.size();
-//    }
+    public int getLength() {
+        return titles.size();
+    }
 //
-//    private void setUpTitles(){
-//        String[] titleToAdd = {
-//                "The Hulk - Superhero",
-//                "The Godfather - Crime",
-//                "The Departed - Crime",
-//                "Dr StrangeLove - Alternative",
-//                "The Gladiator - Historical Epic",
-//                "Mr Nice - Welsh Stuff",
-//                "In Bruge - Alternative"};
-//        for (String title: titleToAdd){
-//            titles.add(title);
-//        }
-//    }
-//
-//    public String getTitleAtIndex (int index){
-//        return titles.get(index);
-//    }
-//
-//    public String getTitle(){
-//        return
-//    }
 
+    private void setUpTitles() {
+        String[] titleToAdd = {
+                "The Hulk",
+                "The Godfather",
+                "The Departed",
+                "Dr StrangeLove",
+                "The Gladiator",
+                "Mr Nice",
+                "In Bruge"};
+        String[] genreToAdd = {
+                "SuperHero",
+                "Crime Thriller",
+                "Crime Thriller",
+                "Alternative",
+                "Historical Epic",
+                "Alternative",
+                "Alternative"};
+        for (String title, genre; titleToAdd, genreToAdd) {
+            titles.add(title, genre);
+        }
+    }
+
+    public String getTitleAtIndex(int index) {
+        return titles.get(index);
+    }
 }
